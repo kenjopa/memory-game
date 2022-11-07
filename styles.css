@@ -62,7 +62,7 @@ body {
 
 .win {
    font-family: sans-serif;
-   font-size: 200%;
+   font-size: 185%;
    margin: auto;
    color: rgb(207, 253, 226);
    flex-direction: column;
@@ -75,7 +75,9 @@ body {
    border-radius: 50%;
    justify-content: center;
    background-color: rgb(207, 253, 226);
+   cursor: pointer;
 }
+
 
 @media screen and (max-width: 768px) {
    .memory-game {
