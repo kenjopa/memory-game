@@ -10,11 +10,9 @@ let firstCard, secondCard;
 
 let lockBoard = false;
 
-// let flippedCards = document.querySelectorAll('.flip'); // should use loop
+let flippedCards = document.querySelectorAll('.flip');
 
-// let winChecker = false;
-
-// let winAudio = new Audio("audio/win.mp3")
+let winAudio = new Audio("audio/win.mp3")
 
 function flipCard() {
    if (lockBoard) return;
@@ -63,25 +61,16 @@ function resetBoard() {
    })
 })();
 
-
-// function checkWin() {  
-//       setInterval(() => {
-//          game.style.display = 'none';
-//          win.style.display = 'block';
-//          winAudio.play()
-//       }, 1000);
-// }
-
-// function lastClick() {
-//    if (document.querySelectorAll('.flip').length === 10) {
-//       cards.addEventListener('click', checkWin())
-//    }
-// }
-// if flipLength === 12) {
-//    checkWin()
-// }
-
-
-
+function checkWin() {  
+   if (document.querySelectorAll('.flip').length === 12) {
+      setInterval(() => {
+         game.style.display = 'none';
+         win.style.display = 'flex';
+         winAudio.play()
+      }, 1000);
+   }
+}
 
 cards.forEach(card => card.addEventListener('click', flipCard));
+
+cards.forEach(card => card.addEventListener('click', checkWin));

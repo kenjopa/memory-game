@@ -5,10 +5,12 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="styles.css">
-   <title>Document</title>
+   <link rel="icon" href="favicon.ico" type="image/x-icon">
+   <script src="https://kit.fontawesome.com/10e3fcebb6.js" crossorigin="anonymous"></script>
+   <title>Memory Card Game</title>
 </head>
 <body>
-   <section class="memory-game" style="display: flex;">
+   <section class="memory-game">
       <div class="memory-card" data-city="petropavlovsk">
          <img src="img/petropavlovsk.png" alt="Petropavlovsk" class="front-face">
          <img src="img/kazakhstan.png" alt="Kazakhstan" class="back-face">
@@ -58,10 +60,10 @@
          <img src="img/kazakhstan.png" alt="Kazakhstan" class="back-face">
       </div>
    </section>
-   <!-- <section class="win" style="display: none;">
-      <h1 class="win-title">You won!</h1>
-      <button class="btn try-again"></button>
-   </section> -->
+   <section class="win" style="display: none;">
+      <h1 class="win-title">Вы победили!</h1>
+      <button class="btn try-again" onClick="window.location.reload()"><i class="fa-solid fa-arrows-rotate fa-2xl"></i></button>
+   </section>
    <script src="scripts.js"></script>
 </body>
 </html>
